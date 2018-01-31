@@ -4,14 +4,15 @@ function PigWeightModel() {
     heartGirth = ko.observable("");
     length = ko.observable("");
     fixedValue = 400;
-
+    kilogramFactor = 0.455;
 
     // Calculate pig weight
     totalPigWeight = ko.computed(function() {
-        // totalWeight = 0;
-        // girthSquared = self.heartGirth * 2;
-        // totalWeight = (girthSquared * self.length) / self.fixedValue;
-        return parseInt(heartGirth, 10);
+        totalWeight = 0;
+        girthSquared = heartGirth() * heartGirth();
+        totalWeight = ((girthSquared * length()) / fixedValue) * kilogramFactor;
+        // totalWeight = heartGirth + 2;
+        return totalWeight;
     });
 }
 
