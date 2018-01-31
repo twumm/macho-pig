@@ -8,18 +8,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!--Styles-->
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 
 <body>
-    <h2>MachoPigs Weight Calculator</h2>
+    <div class="container">
+        <div class="row" id="header-title">
+            <h2>Pig Weight Calculator</h2>
+        </div>
+        <hr>
+        <div class="row">
+            <input type="number" step="1" placeholder="Enter Heart Girth" data-bind="value: heartGirth, valueUpdate: 'afterkeydown'">
+        </div>
+        <br>
+        <div class="row">
+            <input type="number" step="1" placeholder="Enter Length" data-bind="value: length, valueUpdate: 'afterkeydown'">
+        </div>
+        <br>
+        <div class="row">
+            <h3>
+                Pig Weighs: <span data-bind="text: totalPigWeight().toFixed(2)"></span><span> kg</span>
+            </h3>
+        </div>
+    </div>
 
-    <input type="number" step="1" placeholder="Enter Heart Girth" data-bind="value: heartGirth, valueUpdate: 'afterkeydown'">
-    <input type="number" step="1" placeholder="Enter Length" data-bind="value: length, valueUpdate: 'afterkeydown'">
-    <!--<h3 data-bind="visible: totalPigWeight() > 0">-->
-    <h3>
-        Pig Weighs: <span data-bind="text: totalPigWeight().toFixed(2)"></span><span> kg</span>
-    </h3>
+
     <script src="js/lib/knockout-3.2.0.js"></script>
     <script src="js/app.js"></script>
 </body>
