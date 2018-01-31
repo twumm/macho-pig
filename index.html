@@ -8,10 +8,11 @@
 <body>
     <h2>Macho Pig Weight Calculator</h2>
 
-    <input placeholder="Enter Heart Girth" data-bind="value: heart-girth">
-    <input placeholder="Enter Length" data-bind="value: length">
-    <h3 data-bind="visible: ">
-        dgfs
+    <input type="number" step="1" placeholder="Enter Heart Girth" data-bind="value: heartGirth, valueUpdate: 'afterkeydown'">
+    <input type="number" step="1" placeholder="Enter Length" data-bind="value: length, valueUpdate: 'afterkeydown'">
+    <!--<h3 data-bind="visible: totalPigWeight() > 0">-->
+    <h3>
+        Pig Weighs: <span data-bind="text: totalPigWeight()"></span>
     </h3>
     <script src="js/lib/knockout-3.2.0.js"></script>
     <script src="js/app.js"></script>
