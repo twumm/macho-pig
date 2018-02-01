@@ -9,3 +9,8 @@ body {
 .align-style {
     margin: auto !important;
 }
+
+#home,
+#mainNavbar a {
+    color: white;
+}
