@@ -22,7 +22,7 @@ if ('serviceWorker' in navigator) {
         .register('/sw.js')
         .then(function() {
             console.log('Service Worker Registered.');
-        })
+        });
 }
 
 ko.applyBindings(new PigWeightModel());
