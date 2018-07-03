@@ -1,4 +1,3 @@
-
 const dataCacheName = 'machoPigData-v1';
 const cacheName = 'machoPigCache-1';
 const filesToCache = [
