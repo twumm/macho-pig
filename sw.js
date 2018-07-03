@@ -1,7 +1,7 @@
 const dataCacheName = 'machoPigData-v1';
 const cacheName = 'machoPigCache-1';
 const filesToCache = [
-  '/',
+  './',
   './index.html',
   // '/css/style.css',
   // '/css/bootstrap.min.css',
