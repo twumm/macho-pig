@@ -16,4 +16,13 @@ function PigWeightModel() {
     });
 }
 
+// Add service worker
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+        .register('/sw.js')
+        .then(function() {
+            console.log('Service Worker Registered.');
+        })
+}
+
 ko.applyBindings(new PigWeightModel());
