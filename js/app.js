@@ -20,8 +20,12 @@ function PigWeightModel() {
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker
         .register('./sw.js')
-        .then(function() {
+        .then(function(registration) {
             console.log('Service Worker Registered.');
+            registration.update();
+        }).catch(error => {
+            // Registration failed.
+            console.log('Registration failed with ' + error);
         });
 }
 
