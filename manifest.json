@@ -3,11 +3,6 @@
   "short_name": "MachoPig",
   "icons": [
     {
-    "src": "./images/machopig-logo.png",
-    "type": "image/png",
-    "sizes": "144x144"
-    },
-    {
     "src": "./images/machopig-logo192px.png",
     "type": "image/png",
     "sizes": "192x192"
