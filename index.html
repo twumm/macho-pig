@@ -11,54 +11,55 @@
     <link rel="manifest" href="./manifest.json">
     <!--Styles-->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
     <script type="text/javascript" src="js/lib/jquery.js"></script>
 </head>
 
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="topNavbar">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                    <a class="navbar-brand" href="#" id="home">MachoPig</a>
-                </div>
-                <div class="collapse navbar-collapse" id="mainNavbar">
-                    <ul class="nav navbar-nav navbar-right">
-                        <!--<li class=""><a href="#">Home</a></li>-->
-                        <li><a href="#">Instructions</a></li>
-                        <li><a href="#">Sell Pig</a></li>
-                        <li><a href="#">Buy Pig</a></li>
-                    </ul>
-                </div>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg border-bottom">
+        <div class="container">
+            <a class="navbar-brand" href="#" id="home">MachoPig</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ml-auto list-inline">
+                    <li class="navbar-item list-inline-item">
+                        <a href="#">Sell a Pig</a>
+                    </li>
+                    <li class="navbar-item list-inline-item">
+                        <a href="#">Buy a Pig</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
+    
     <div class="container main-content">
-        <div class="row text-center">
-            <h2 class="">Pig Weight Calculator</h2>
+        <div class="row d-flex justify-content-center">
+            <h2 class="mt-3">Pig Weight Calculator</h2>
         </div>
         <hr>
-        <div class="row text-center">
+        <div class="row d-flex justify-content-center girth-input">
             <input type="number" step="1" placeholder="Enter Heart Girth (inches)" data-bind="textInput: heartGirth">
         </div>
         <br>
-        <div class="row text-center">
+        <div class="row d-flex justify-content-center length-input">
             <input type="number" step="1" placeholder="Enter Length (inches)" data-bind="textInput: length">
         </div>
         <br>
-        <div class="row text-center">
+        <div class="row d-flex justify-content-center">
             <h3>
                 Pig weighs: <strong><span data-bind="text: totalPigWeight().toFixed(2)"></span><span> kg</span></strong>
             </h3>
         </div>
     </div>
+    <!--<div class="well toast">...</div>-->
 
-    <script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
+    <!--<script type="text/javascript" src="js/lib/bootstrap.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
     <script src="js/lib/knockout-3.2.0.js"></script>
     <script src="js/app.js"></script>
 </body>
