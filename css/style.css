@@ -2,15 +2,20 @@ body {
     background-color: pink !important;
 }
 
-.main-content h2 {
-    margin-top: 60px !important;
+.girth-input>input, .length-input>input {
+    width: 270px;
+    height: 50px;
+    font-size: 18px
 }
 
-.align-style {
-    margin: auto !important;
+.toast {
+    /*visibility: hidden;*/
+    background-color: #fff;
+    color: pink;
+    /*position: fixed;*/ /* Sits on top of the screen */
+    bottom: 10px; /* Stick to bottom */
 }
 
-#home,
-#mainNavbar a {
-    color: white !important;
+.toast.show {
+    visibility: visible; /* Show the toast */
 }
