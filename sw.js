@@ -1,14 +1,10 @@
 const dataCacheName = 'machoPigData-v1';
-const cacheName = 'machoPigCache-1';
+const cacheName = 'machoPigCache-v2';
 const filesToCache = [
   './',
   './index.html',
-  // '/css/style.css',
-  // '/css/bootstrap.min.css',
-  './js/app.js',
-  // '/js/lib/knockout-3.2.0.js'
-  // '/js/lib/jquery.js',
-  // '/js/lib/bootstrap.min.js',
+  './css/style.css',
+  './js/app.js'
 ]
 
 // Install service worker and save assets/files to cache.
