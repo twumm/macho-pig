@@ -16,13 +16,22 @@ function PigWeightModel() {
     });
 }
 
+
+
 // Add service worker
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker
         .register('./sw.js')
         .then(function(registration) {
             console.log('Service Worker Registered.');
-            registration.update();
+            // registration.update();
+            /*registration.addEventListener('updatefound', () => {
+                registration.installing.addEventListener('statechange', () => {
+                    if (this.state == 'installed') {
+                        // There is an update ready so prompt user.
+                    }
+                })
+            })*/
         }).catch(error => {
             // Registration failed.
             console.log('Registration failed with ' + error);
