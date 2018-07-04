@@ -2,6 +2,21 @@ body {
     background-color: pink !important;
 }
 
+.links>ul>li>a {
+    text-decoration: none;
+    color: white;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.links>ul>li>a:hover {
+    border: 1px solid pink;
+    border-radius: 5px;
+    padding: 3px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+
 .girth-input>input, .length-input>input {
     width: 270px;
     height: 50px;
