@@ -1,12 +1,12 @@
-const dataCacheName = 'machoPigData-v3';
-const cacheName = 'machoPigCache-v3';
+const dataCacheName = 'machoPigData-v1';
+const cacheName = 'machoPigCache-v1';
 const filesToCache = [
   './',
   './index.html',
   './css/style.css',
   './js/app.js',
   './js/lib/jquery.js',
-  './js/lib/knockout-3.2.0',
+  './js/lib/knockout-3.2.0.js',
   './images/pig-dimension.png'
 ]
 
