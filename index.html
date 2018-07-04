@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <title>Pig Weight Calculator</title>
@@ -19,7 +19,7 @@
     <nav class="navbar navbar-dark bg-dark navbar-expand-lg border-bottom">
         <div class="container">
             <a class="navbar-brand" href="#" id="home">MachoPig</a>
-            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse" aria-label="Menu hamburger icon">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse links" id="navbarCollapse">
@@ -41,7 +41,7 @@
         </div>
         <hr>
         <div class="row d-flex justify-content-center girth-input">
-            <input type="number" step="1" placeholder="Enter Heart Girth (inches)" data-bind="textInput: heartGirth">
+            <input type="number" step="1" placeholder="Enter Heart Girth (inches)" data-bind="textInput: heartGirth" autofocus>
         </div>
         <br>
         <div class="row d-flex justify-content-center length-input">
@@ -57,14 +57,14 @@
             <h5>How to pick the measurement</h5>
         </div>
         <div class="row d-flex justify-content-center">
-            <img src="./images/pig-dimension.png">
+            <img src="./images/pig-dimension.png" alt="Pig measurement guide" defer>
         </div>
     </div>
     <!--<div class="well toast">...</div>-->
 
     <!--<script type="text/javascript" src="js/lib/bootstrap.min.js"></script>-->
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" defer></script>-->
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous" defer></script>
     <script type="text/javascript" src="js/lib/jquery.js" defer></script>
     <script src="js/lib/knockout-3.2.0.js"></script>
     <script src="js/app.js"></script>
