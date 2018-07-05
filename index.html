@@ -56,13 +56,24 @@
             </h4>
         </div>
         <div class="row d-flex justify-content-center mt- pt-3">
-            <h6>How to pick the measurement</h6>
+            <h6 id="how-to">How to pick the measurement</h6>
         </div>
         <div class="row d-flex justify-content-center">
             <img src="./images/pig-dimension.png" alt="Pig measurement guide" defer>
         </div>
     </div>
-    <!--<div class="well toast">...</div>-->
+
+    <!--Update page notification bar-->
+    <div class="alert alert-dismissible fade update-notification border-top m-0" id="update-ready" role="alert">
+        <div class="container">
+            <div class="row d-flex justify-content">
+                <strong>Update available. Tap to refresh</strong>
+                    <button type="button" class="btn close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true" style="color: white">&times;</span>
+                    </button>
+            </div>
+        </div>
+    </div>
 
     <script type="text/javascript" src="js/lib/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" defer="defer"></script>
