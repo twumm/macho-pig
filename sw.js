@@ -9,7 +9,7 @@ const filesToCache = [
   './js/lib/knockout-3.2.0.js',
   './images/pig-dimension.png'
 ]
-// Let's see the update-toast
+// Let's see the
 // Install service worker and save assets/files to cache.
 self.addEventListener('install', event => {
   console.log('[ServiceWorker] Install');
