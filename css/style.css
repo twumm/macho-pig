@@ -26,11 +26,16 @@ body {
 #update-ready {
     /* Set position as fixed so it stays fixed! */
     position: fixed !important;
-    bottom: 0 !important;
+    bottom: 0;
     width: 100%;
     /*height: 60px;*/
     /* Set the fixed height */
     /*line-height: 60px;*/
     background-color: #343A40;
+    color: white;
+}
+
+#get-update {
+    text-decoration: none;
     color: white;
 }
