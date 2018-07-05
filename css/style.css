@@ -23,14 +23,14 @@ body {
     font-size: 18px
 }
 
-.toast {
-    /*visibility: hidden;*/
-    background-color: #fff;
-    color: pink;
-    /*position: fixed;*/ /* Sits on top of the screen */
-    bottom: 10px; /* Stick to bottom */
-}
-
-.toast.show {
-    visibility: visible; /* Show the toast */
+#update-ready {
+    /* Set position as fixed so it stays fixed! */
+    position: fixed !important;
+    bottom: 0 !important;
+    width: 100%;
+    /*height: 60px;*/
+    /* Set the fixed height */
+    /*line-height: 60px;*/
+    background-color: #343A40;
+    color: white;
 }
