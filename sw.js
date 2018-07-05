@@ -1,5 +1,5 @@
 const dataCacheName = 'machoPigData-v1';
-const cacheName = 'machoPigCache-v0';
+const cacheName = 'machoPigCache-v1';
 const filesToCache = [
   './',
   './index.html',
@@ -9,7 +9,7 @@ const filesToCache = [
   './js/lib/knockout-3.2.0.js',
   './images/pig-dimension.png'
 ]
-// Let's see
+
 // Install service worker and save assets/files to cache.
 self.addEventListener('install', event => {
   console.log('[ServiceWorker] Install');
