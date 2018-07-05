@@ -46,6 +46,13 @@ if ('serviceWorker' in navigator) {
                 trackInstalling(registration.installing);
                 return;
             }
+            
+            // Otherwise, listen for new installing workers arriving.
+            // If one arrives, track it's progress and show notification when it is installed.
+            registration.addEventListener('updatefound', () => {
+                console.log('Update found function');
+                trackInstalling(registration.installing);
+            });
         }).catch(error => {
             // Registration failed.
             console.log('Registration failed with ' + error);
