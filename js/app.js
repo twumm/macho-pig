@@ -28,6 +28,10 @@ if ('serviceWorker' in navigator) {
         .register('./sw.js')
         .then(function(registration) {
             console.log('Service Worker Registered.');
+            // If the serviceWorker control is false, do nothing.
+            if (!navigator.serviceWorker.controller) {
+                return;
+            }
         }).catch(error => {
             // Registration failed.
             console.log('Registration failed with ' + error);
