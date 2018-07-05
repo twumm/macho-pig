@@ -1,5 +1,5 @@
 const dataCacheName = 'machoPigData-v1';
-const cacheName = 'machoPigCache-v1';
+const cacheName = 'machoPigCache-v3';
 const filesToCache = [
   './',
   './index.html',
@@ -42,4 +42,12 @@ self.addEventListener('fetch', event => {
       return response || fetch(event.request);
     })
   );
+});
+
+// Listen for "message" event and call skipWaiting if appropriate message
+// is received.
+self.addEventListener('message', event => {
+  if (event.data.action == 'skipWaiting') {
+    self.skipWaiting();
+  }
 });
