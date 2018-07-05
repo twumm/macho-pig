@@ -17,7 +17,7 @@ function PigWeightModel() {
 }
 
 // If there an update for the service worker, show update modal.
-let updateReady = () => {
+let updateReady = (worker) => {
     const updateNotification = document.getElementById('update-ready');
     updateNotification.classList.add('show');
 }
@@ -28,6 +28,14 @@ let trackInstalling = (worker) => {
         if (worker.state == 'installed') {
             updateReady();
         }
+    });
+
+    // Get the click event from the update-ready toast and 
+    // post the skipWaiting message to the serviceWorker when
+    // the user clicks to update page.
+    const getUpdate = document.getElementById('get-update');
+    getUpdate.addEventListener('click', () => {
+        worker.postMessage({action: 'skipWaiting'});
     });
 }
 
@@ -59,9 +67,13 @@ if ('serviceWorker' in navigator) {
             // Otherwise, listen for new installing workers arriving.
             // If one arrives, track it's progress and show notification when it is installed.
             registration.addEventListener('updatefound', () => {
-                console.log('Update found function');
                 trackInstalling(registration.installing);
             });
+
+            // Listen for controlling service worker changing and reload the page.
+            navigator.serviceWorker.addEventListener('controllerchange', () => {
+                window.location.reload();
+            })
         }).catch(error => {
             // Registration failed.
             console.log('Registration failed with ' + error);
