@@ -16,7 +16,11 @@ function PigWeightModel() {
     });
 }
 
-
+// If there an update for the service worker, show update modal.
+let updateReady = () => {
+    const updateNotification = document.getElementById('update-ready');
+    updateNotification.classList.add('show');
+}
 
 // Add service worker
 if ('serviceWorker' in navigator) {
@@ -24,14 +28,6 @@ if ('serviceWorker' in navigator) {
         .register('./sw.js')
         .then(function(registration) {
             console.log('Service Worker Registered.');
-            // registration.update();
-            /*registration.addEventListener('updatefound', () => {
-                registration.installing.addEventListener('statechange', () => {
-                    if (this.state == 'installed') {
-                        // There is an update ready so prompt user.
-                    }
-                })
-            })*/
         }).catch(error => {
             // Registration failed.
             console.log('Registration failed with ' + error);
