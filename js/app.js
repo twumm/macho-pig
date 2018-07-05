@@ -22,6 +22,15 @@ let updateReady = () => {
     updateNotification.classList.add('show');
 }
 
+// Check status of service worker install state.
+let trackInstalling = (worker) => {
+    worker.addEventListener('statechange', () => {
+        if (worker.state == 'installed') {
+            updateReady();
+        }
+    });
+}
+
 // Add service worker
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker
