@@ -1,5 +1,5 @@
 const dataCacheName = 'machoPigData-v1';
-const cacheName = 'machoPigCache-v4';
+const cacheName = 'machoPigCache-v0';
 const filesToCache = [
   './',
   './index.html',
