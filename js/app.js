@@ -32,6 +32,12 @@ if ('serviceWorker' in navigator) {
             if (!navigator.serviceWorker.controller) {
                 return;
             }
+            
+            // If there an updated worker already waiting, trigger the update dialog
+            if (registration.waiting) {
+                updateReady();
+                return;
+            }
         }).catch(error => {
             // Registration failed.
             console.log('Registration failed with ' + error);
