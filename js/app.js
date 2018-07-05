@@ -38,6 +38,14 @@ if ('serviceWorker' in navigator) {
                 updateReady();
                 return;
             }
+            
+            // If there is an updated worker installing, track it's progress.
+            // If it becomes 'installed', call the update.
+            if (registration.installing) {
+                console.log('sw installing function');
+                trackInstalling(registration.installing);
+                return;
+            }
         }).catch(error => {
             // Registration failed.
             console.log('Registration failed with ' + error);
