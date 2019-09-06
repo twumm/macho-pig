@@ -7,11 +7,17 @@ function PigWeightModel() {
     kilogramFactor = 0.455;
 
     // Calculate pig weight
-    totalPigWeight = ko.computed(function() {
+    totalPigWeightInKilos = ko.computed(function() {
         totalWeight = 0;
         girthSquared = heartGirth() * heartGirth();
         totalWeight = ((girthSquared * length()) / fixedValue) * kilogramFactor;
-        // totalWeight = heartGirth + 2;
+        return totalWeight;
+    });
+
+    totalPigWeightInPounds = ko.computed(function() {
+        totalWeight = 0;
+        girthSquared = heartGirth() * heartGirth();
+        totalWeight = ((girthSquared * length()) / fixedValue);
         return totalWeight;
     });
 }
